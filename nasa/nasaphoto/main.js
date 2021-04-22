@@ -4,7 +4,7 @@ document.querySelector("button").addEventListener("click", getphotos);
 function getphotos() {
   const dateVal = document.querySelector("input").value;
   const url =
-    "https://api.nasa.gov/planetary/apod?api_key=W8ituvMovkY92eRC3IWJwlJSxgmpeLHfMI6xbOfJ&date=" +
+    "https://api.nasa.gov/planetary/apod?api_key=xxxxxxxxxxxxxxxxxxxxxxx&date=" +
     dateVal;
   fetch(url)
     .then((res) => res.json())
