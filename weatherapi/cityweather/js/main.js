@@ -4,7 +4,7 @@ function getit() {
   const inputVal = document.querySelector("input").value;
 
   const url =
-    "https://api.openweathermap.org/data/2.5/find?appid=d40f4f9027fc1080c61b38f611235477&units=imperial&q=" +
+    "https://api.openweathermap.org/data/2.5/find?appid=xxxxxxxxxxxxxxxxxxxxxxxx&units=imperial&q=" +
     inputVal;
 
   fetch(url)
