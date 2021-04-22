@@ -4,10 +4,9 @@ const weather = [];
 function getphotos() {
   // const dateVal1 = document.querySelector("#start").value;
   // const dateVal2 = document.querySelector("#stop").value;
-  // // "https://images-api.nasa.gov/&thumbs=&api_key=W8ituvMovkY92eRC3IWJwlJSxgmpeLHfMI6xbOfJ/search?q="
 
   const url =
-    "https://api.nasa.gov/planetary/apod?api_key=W8ituvMovkY92eRC3IWJwlJSxgmpeLHfMI6xbOfJ&thumbs=true&hd=true&start_date=2018-12-01&end_date=2018-12-06"
+    "https://api.nasa.gov/planetary/apod?api_key=xxxxxxxxxxxxxx&thumbs=true&hd=true&start_date=2018-12-01&end_date=2018-12-06"
     // dateVal1 +
     // dateVal2;
 
