@@ -1,0 +1,119 @@
+
+<!-- https://www.w3schools.com/tags/tag_template.asp to display the object using template tag -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Pokedex</title>
+</head>
+
+<body>
+  <div class="pokedex">
+    <div class="right-container">
+      <div class="right-container__black">
+        <div class="right-container__screen">
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+        </div>
+      </div>
+      <div class="right-container__buttons">
+        <div class="left-button">Prev</div>
+        <div class="right-button">Next</div>
+      </div>
+    </div>
+    <div class="left-container">
+
+      <div class="left-container__black">
+        <div class="left-container__screen">
+          <div class="main-screen hide">
+            <div class="screen__header">
+              <span class="poke-name"></span>
+              <span class="poke-id"></span>
+            </div>
+            <div class="screen__image">
+              <!--                <img class="poke-front-image" src=""> -->
+              <img src="" class="poke-front-image" alt="front">
+              <!--               <img src="" class="poke-back-image" alt="back">  -->
+            </div>
+            <div class="screen__description">
+              <div class="stats__types">
+                <!--     <span class="poke-type-one"></span>
+                <span class="poke-type-two"></span>  -->
+                <!--                 <button class="myBtn" type="Button">Open for stats</button> -->
+              </div>
+              <!--   <div class="screen__stats">
+                <p class="stats__weight">
+                  weight: <span class="poke-weight"></span>
+                </p>
+                <p class="stats__height">
+                  height: <span class="poke-height"></span>
+                </p>
+              </div>  -->
+
+              <button id="modal-btn" class="button">View stats </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--     </div> -->
+  <!--     </div> -->
+
+  <!--   </div> -->
+
+  <div id="my-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>POKEMAN STATS</h2>
+      </div>
+      <div class="modal-body">
+
+        <h2 class="modalTitle">
+          <p class="modal-id"></p>
+          <p class="modal-name"></p>
+        </h2>
+        <p class="modal-height"></p>
+        <p class="modal-weight"></p>
+        <img class="modal-front-img" src="">
+        <img class="modal-back-img" src="">
+        <p class="modal-type"></p>
+        <p class="modal-basestat"></p>
+        <p class="modal-stat"></p>
+        <p class="modal-ability"></p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  box-sizing:boreder-box;
+  margin:0;
+  padding:0;
+
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body{
+  padding: 30px;
+  font-size:1rem;
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+/*   background: url("https://i.imgur.com/zwp2EXP.png") center top; */
+
+  background-color:  #e6e6ff;
+
+  background-repeat: repeat-x;
+
+  background-size: contain;
+
+  font-family: "Press Start 2P";
+
+  position: relative;
+
+
+}
+.container{
+  display:flex;
+  padding:4rem;
+
+}
+.box {
+  display: inline-flex;
+
+}
+
+.pokemon{
+  text-align:center;
+}
+.pokeSearch {
+  text-align: center;
+  padding: 2rem;
+}
+h1 {
+  text-align: center;
+  padding 3rem;
+}
+
+.poke-box,.left-box{
+  display: flex;
+  width: 30rem;
+  height: 40rem;
+  padding:1rem;
+  border: 10px solid black;
+  background:  #ff8080;
+  display:block;
+  color: white;
+/*   justify-content: center; */
+  border-radius: 10%;
+}
+
+
+.imgPic{
+  padding-top:5rem;
+  width:20rem;
+  margin-left:3rem;
+}
+
+  .pokemonInfo, .pokeInfo{
+  width:28rem;
+  height:38rem;
+  font-size:1rem;
+  top:2rem;
+   display:block;
+   padding:1rem;
+  background:	#A9A9A9;
+  border:1px solid  #ff8080;
+  border-radius:10%;
+}
+.pokemonInfo{
+  height:auto;
+}
+.evolveBtn{
+  padding:1rem;
+  margin-left:0rem;
+  background:#ff9999;
+  border:1px solid black;
+  border-radius:10%;
+}
+
+.evolveBtn:hover,.evolveBtn:active{
+  background:red;
+  color:white;
+}
+#poke1, .btn{
+  background:#ff9999;
+}
+.pokemonInfo, .stats. .types, .abilities{
+  display:block;
+}
