@@ -1,0 +1,15 @@
+.datetitle {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+.datetitle h2 {
+  padding-right: 80px;
+}
+
+main {
+  display: flex;
+}
+.pics {
+  margin-top: 4rem;
+}
