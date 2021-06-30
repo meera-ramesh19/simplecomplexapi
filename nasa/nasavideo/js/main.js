@@ -6,7 +6,7 @@ function getphotos() {
   const dateVal1 = document.querySelector("#start").value;
   const dateVal2 = document.querySelector("#stop").value;
   const url =
-    "https://api.nasa.gov/planetary/apod?api_key=W8ituvMovkY92eRC3IWJwlJSxgmpeLHfMI6xbOfJ&start_date=" +
+    "https://api.nasa.gov/planetary/apod?api_key=xxxxxxxxxxxxxxxxxxxxxxx&start_date=" +
     dateVal1 +
     "&end_date=" +
     dateVal2;
