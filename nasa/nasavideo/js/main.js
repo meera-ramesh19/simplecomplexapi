@@ -2,63 +2,70 @@
 document.querySelector("button").addEventListener("click", getphotos);
 const weather = [];
 function getphotos() {
-  // const dateVal1 = document.querySelector("#start").value;
-  // const dateVal2 = document.querySelector("#stop").value;
-
+  // const dateVal = document.querySelector("#start").value;
+  const dateVal1 = document.querySelector("#start").value;
+  const dateVal2 = document.querySelector("#stop").value;
   const url =
-    "https://api.nasa.gov/planetary/apod?api_key=xxxxxxxxxxxxxx&thumbs=true&hd=true&start_date=2018-12-01&end_date=2018-12-06"
-    // dateVal1 +
-    // dateVal2;
+    "https://api.nasa.gov/planetary/apod?api_key=W8ituvMovkY92eRC3IWJwlJSxgmpeLHfMI6xbOfJ&start_date=" +
+    dateVal1 +
+    "&end_date=" +
+    dateVal2;
+  console.log(url);
+  // const url =
+  //   "https://api.nasa.gov/planetary/apod?api_key=W8ituvMovkY92eRC3IWJwlJSxgmpeLHfMI6xbOfJ&thumbs=true&date=" +
+  //   dateVal;
+  // "https://api.nasa.gov/planetary/apod?api_key=W8ituvMovkY92eRC3IWJwlJSxgmpeLHfMI6xbOfJ&thumbs=true&hd=true&date=" + dateVal
+  // // dateVal1 +
+  // dateVal2;
 
-    // dateVal;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        function rotate(i) {
-          if (i >= 0) {
-            console.log(data);
-            document.querySelector("iframe").innerHTML = "";
-            let todayDate = data[i].date;
-            let title = data[i].title;
-            let urls = data[i].url;
-            let explain = data[i].explanation;
-            let mediaType = data[i].media_type;
-            console.log("mediaType" + mediaType);
-            if (mediaType === "image") {
-              let hdImage = data[i].hdurl;
-              console.log("image" + hdImage);
-              document.querySelector("img").src = hdImage;
-            } else if (mediaType == "video") {
-              // let result.innerHTML += "<br>--<br>Provider: " + video.provider + "<br>ID: " + video.id;
-              let videoUrl = parseVideo(data[i].url);
-              console.log("url" + data[i].url);
-              if (videoUrl.type === "youtube") {
-                console.log("Hit youtube" + data[i].url);
-                document.querySelector(".youtubeClass").src = data[i].url;
-              } else {
-                console.log("Hit vim" + data[i].url);
-                document.querySelector(".vimeoClass").src = data[i].url;
-              }
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      function rotate(i) {
+        if (i >= 0) {
+          console.log(data);
+          document.querySelector("iframe").innerHTML = "";
+          let todayDate = data[i].date;
+          let title = data[i].title;
+          let urls = data[i].url;
+          let explain = data[i].explanation;
+          let mediaType = data[i].media_type;
+          console.log("mediaType" + mediaType);
+          if (mediaType === "image") {
+            let hdImage = data[i].hdurl;
+            console.log("image" + hdImage);
+            document.querySelector("img").src = hdImage;
+          } else if (mediaType == "video") {
+            // let result.innerHTML += "<br>--<br>Provider: " + video.provider + "<br>ID: " + video.id;
+            let videoUrl = parseVideo(data[i].url);
+            console.log("url" + data[i].url);
+            if (videoUrl.type === "youtube") {
+              console.log("Hit youtube" + data[i].url);
+              document.querySelector(".youtubeClass").src = data[i].url;
+            } else {
+              console.log("Hit vim" + data[i].url);
+              document.querySelector(".vimeoClass").src = data[i].url;
             }
-
-            document.querySelector("h4").innerHTML = todayDate;
-            document.querySelector(".title").innerHTML = title;
-            document.querySelector("h3").innerHTML = explain;
-            return setTimeout(function () {
-              rotate(i - 1);
-            }, 5000);
           }
+
+          document.querySelector("h4").innerHTML = todayDate;
+          document.querySelector(".title").innerHTML = title;
+          document.querySelector("h3").innerHTML = explain;
+          return setTimeout(function () {
+            rotate(i - 1);
+          }, 5000);
         }
-        rotate(data.length - 1);
-        // let delay = 5000;
-        // let len = data.length - 1;
-        // for (let i = 0; i < len; i++) {
-        //   setTimeout(display(i), delay * i);
-        // }
-      })
-      .catch((err) => {
-        console.log(`error  ${err}`);
-      });
+      }
+      rotate(data.length - 1);
+      // let delay = 5000;
+      // let len = data.length - 1;
+      // for (let i = 0; i < len; i++) {
+      //   setTimeout(display(i), delay * i);
+      // }
+    })
+    .catch((err) => {
+      console.log(`error  ${err}`);
+    });
 }
 
 function parseVideo(url) {
