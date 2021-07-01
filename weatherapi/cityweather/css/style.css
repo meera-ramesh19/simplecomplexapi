@@ -1,4 +1,4 @@
-/******************************************
+******************************************
 /* CSS
 /*******************************************/
 
@@ -10,24 +10,126 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+body {
+  background: lightblue;
+}
 img {
   display: block;
   margin: 0 auto;
 }
 
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
+.wrapper {
+  display: block;
+  /*   justify-content: center;
+  align-items: center; */
+}
+.weatherinfo {
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.weatherapp {
+  background: lightblue;
+  margin: 0 auto;
+  padding: 3rem;
+  width: 600px;
+  max-height: 1000px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0) 0px 18px 36px -18px inset;
+}
+
+.clear {
+  background: url("https://images.unsplash.com/photo-1614945762371-4d12a35d2890?ixlib=rb-1.2.1");
+  background-size: cover;
+}
+.thunder {
+  background: url("https://unsplash.com/images/nature/thunderstorm");
+  background-size: cover;
+}
+.cloudy {
+  background: url("https://images.unsplash.com/photo-1604605801364-3e05c0b4b77c?ixlib=rb-1.2.1");
+  background-size: cover;
+}
+.rainy {
+  background: url("https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?ixlib=rb-1.2.1&q=80");
+}
+.snowy {
+  background: url("https://unsplash.com/s/photos/snow-falling");
+  background-size: cover;
+}
+
+.misty {
+  background: url("https://images.unsplash.com/photo-1612827790177-f5f2ecfa11a6?ixlib=rb-1.2.1&q=8");
+  background-size: cover;
+}
+.sunny {
+  https: ; //images.unsplash.com/photo-1541119638723-c51cbe2262aa?ixlib=rb-1.2.1&q=80
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-/* .videowrapper {
-  position: relative;
-  padding-top: 25px;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-/*   height: 0;
+.sevenday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.videowrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.forecast {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Helvetica", "Arial", sans-serif;
+  margin: 50px auto;
+  max-width: 1000px;
   height: 100%;
-} */
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  /*   box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px; */
+}
+.forecast p {
+  margin: 0;
+}
+.forecast .card {
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  margin: 10px 40px;
+}
+.forecast .card-body {
+  background: grey;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  padding: 10px;
+  text-align: center;
+}
+.forecast .card .title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.forecast .card .icon {
+  margin: 0 auto;
+  width: 60px;
+}
+.forecast .card .wx {
+  font-size: 12px;
+}
+.forecast .card .temps {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.forecast .card .temps span {
+  /*   color: #666; */
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+  padding-right: 6px;
+}
