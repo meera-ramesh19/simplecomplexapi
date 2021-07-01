@@ -3,9 +3,14 @@ document.querySelector("button").addEventListener("click", getit);
 function getit() {
   const location = document.querySelector("input").value;
 
+ // const countryLoc = document.querySelector("#yourCountry").value;
   const url =
     "https://api.openweathermap.org/data/2.5/weather?units=imperial&appid=d40f4f9027fc1080c61b38f611235477&q=" +
     location;
+  // +
+  //   "," +
+  //   countryLoc;
+
 
   fetch(url)
     .then((res) => res.json())
@@ -167,8 +172,12 @@ function getit() {
       // }
     })
     .catch((err) => {
-      console.log(`error  ${err}`);
+     console.log(`error  ${err}`);
+      msg.textContent = "Please search for a valid city 😩";
     });
+  msg.textContent = "";
+  form.reset();
+  input.focus();
 }
 
 function timeConverter(conversiontime) {
