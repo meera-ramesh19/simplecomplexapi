@@ -10,29 +10,38 @@
 
   <!-- external CSS link -->
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <section class="wrapper">
+    <section class="weatherinfo">
+      <div class="weatherapp" id="apps">
+        <h1> Weather App</h1>
 
-  <h1> Weather for a City</h1>
-  <input type="text" name="" value="">
-  <button type="button" name="button">Weather</button>
-  <h3 class="timezone"></h3>
-  <h2></h2>
-  <img src="" alt="">
-  <h2 class="dates"></h2>
-  <h3 class="minmax"></h3>
-  <h3 class="speed"></h3>
-  <h3 class="sun"></h3>
+        <label> City Name:</label>
+        <input type="text" name="" value="">
+        <button type="button" name="button" id="btn">Weather</button>
 
-  <!--   <p>video</p>
-  <div style="width:60%; min-width:480px">
-    <div class="videowrapper">
-      <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="backImg"></div>
+        <h3 class="timezone"></h3>
+        <h3></h3>
+        <img id="temp-icon" src="" alt="">
+        <h3 class="dates"></h3>
+        <h3 class="minmax"></h3>
+        <h3 class="speed"></h3>
+        <h3 class="sun"></h3>
+        <div id="backImg"></div>
+      </div>
+
+    </section>
+
+    <div class="forecast">
 
     </div>
-  </div> -->
 
-  <script type="text/javascript" src="js/main.js"></script>
+  </section>
+  <script type="text/javascript" src="main.js"></script>
 </body>
+
+</html>
